@@ -1,0 +1,54 @@
+# inherit_from: ../.rubocop.yml
+
+Style/Documentation:
+  Enabled: false
+
+# `self`'s are redundant until they're not, and as redundant as documentation before then
+Style/RedundantSelf:
+  Enabled: false
+
+Style/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+Style/SpaceAroundOperators:
+  Enabled: false
+  # JCS: I agree in general but it drives me crazy for simple array access like:
+  # prefix = arr[0..idx-1]
+  # prefix = arr[0..idx - 1] or prefix = arr[0 .. idx - 1]
+
+Style/AsciiComments: # Portuguese isn't "ASCII"...racist
+  Enabled: false
+
+Metrics/ClassLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/LineLength:
+  Enabled: false
+  Max: 99
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 15
+  Exclude:
+    - 'test/**/*'
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 17.5
+  Exclude:
+    - 'test/**/*'
+
+AllCops:
+  DisplayCopNames: true
+  ExtraDetails: true
+  AutoCorrect: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - 'Rakefile'
+    - '*.gemspec'
+
