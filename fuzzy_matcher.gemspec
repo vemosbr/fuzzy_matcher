@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Vemos']
   spec.email         = ["ajuda@vemos.com.br"]
   spec.homepage      = "https://github.com//fuzzy_matcher"
-  spec.summary       = "TODO: summary"
-  spec.description   = "TODO: description"
+  spec.summary       = "Compare strings based on similarity"
+  spec.description   = "Helper functions for comparing strings which may only be mostly inequal instead of exactly equal."
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
